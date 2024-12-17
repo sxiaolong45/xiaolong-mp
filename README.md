@@ -5,7 +5,9 @@
 ```bash
 portainer/portainer-ce:latest
 ```
+```bash
 6053537/portainer-ce:latest
+```
   
   默认使用第二个中文版
   
