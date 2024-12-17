@@ -1,5 +1,22 @@
 #!/bin/bash
 
+# 停止容器、修改权限、重启容器函数
+restart_container_with_permissions() {
+    local container_name="$1"
+    local mount_path="$2"
+
+    echo "正在停止容器 $container_name..."
+    docker stop "$container_name" >/dev/null 2>&1
+    echo "已停止容器 $container_name。"
+
+    echo "正在给目录 $mount_path 赋予权限 chmod -R 777..."
+    sudo chmod -R 777 "$mount_path"
+
+    echo "正在重新启动容器 $container_name..."
+    docker start "$container_name" >/dev/null 2>&1
+    echo "容器 $container_name 已重新启动。"
+}
+
 # 输入镜像版本
 select_image_version() {
     local service_name="$1"
@@ -90,6 +107,10 @@ generate_and_run_container() {
     eval "$docker_command"
     if [[ $? -eq 0 ]]; then
         echo "${service_name} 容器已成功安装！"
+        for volume in "${default_volumes[@]}"; do
+            local mount_path=$(echo "$volume" | awk -F':' '{print $1}')
+            restart_container_with_permissions "$container_name" "$mount_path"
+        done
     else
         echo "安装 ${service_name} 容器失败，请检查错误信息。"
     fi
