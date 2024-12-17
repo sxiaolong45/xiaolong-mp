@@ -1,5 +1,6 @@
 # xiaolong-mp
 简单的脚本安装mp及相关软件
+执行命令
 ```bash
 curl -O https://raw.githubusercontent.com/shixiaolong777/xiaolong-mp/main/xiaolong.sh && chmod +x xiaolong.sh && ./xiaolong.sh
 ```
