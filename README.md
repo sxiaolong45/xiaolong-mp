@@ -1,13 +1,11 @@
 # xiaolong-mp
-<div align="center">简单的脚本安装mp及相关软件<div>
+简单的脚本安装mp及相关软件
 
-
-<div>
   1.安装portainer 可以选择安装的镜像
   portainer/portainer-ce:latest 6053537/portainer-ce:latest
   默认使用第二个中文版
   
-- 2.安装alist
+2.安装alist
   xhofe/alist:latest
   默认使用官方版
   
