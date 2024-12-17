@@ -7,7 +7,7 @@
   portainer/portainer-ce:latest 6053537/portainer-ce:latest
   默认使用第二个中文版
   
-2.安装alist
+- 2.安装alist
   xhofe/alist:latest
   默认使用官方版
   
