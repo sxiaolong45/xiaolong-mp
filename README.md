@@ -1,7 +1,7 @@
 # xiaolong-mp
 简单的脚本安装mp及相关软件
 
-1.安装portainer 可以选择安装的镜像 portainer/portainer-ce:latest 6053537/portainer-ce:latest
+1.安装portainer 可以选择安装的镜像 ```bash portainer/portainer-ce:latest ``` 6053537/portainer-ce:latest
   
   默认使用第二个中文版
   
