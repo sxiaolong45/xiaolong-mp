@@ -108,8 +108,39 @@ install_alist() {
     generate_and_run_container "Alist" "alist" image_versions[@] volume_mapping[@]
 }
 
-install_rclone(){
+# 检测并安装 fuse3
+install_fuse3_if_needed() {
+    echo "正在检测是否已安装 fuse3..."
+    if ! dpkg -l | grep -q fuse3; then
+        echo "未检测到 fuse3，正在安装..."
+        sudo apt-get update
+        if sudo apt-get install -y fuse3; then
+            echo "fuse3 已成功安装。"
+        else
+            echo "fuse3 安装失败，请检查错误信息。"
+            return 1
+        fi
+    else
+        echo "fuse3 已安装，跳过安装步骤。"
+    fi
+    return 0
+}
 
+# 安装 rclone 函数
+install_rclone() {
+    echo "正在安装 rclone..."
+    install_fuse3_if_needed
+    if [[ $? -ne 0 ]]; then
+        echo "由于 fuse3 未成功安装，rclone 安装中止。"
+        return 1
+    fi
+
+    sudo -v
+    if curl https://rclone.org/install.sh | sudo bash; then
+        echo "rclone 已成功安装。"
+    else
+        echo "rclone 安装失败，请检查网络连接或权限。"
+    fi
 }
 
 install_qbittorrent() {
