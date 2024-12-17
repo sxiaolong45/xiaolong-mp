@@ -9,7 +9,10 @@
   
   默认使用官方版
   
-3.安装rclone sudo -v ; curl https://rclone.org/install.sh | sudo bash
+3.安装rclone 
+  ```bash 
+  sudo -v ; curl https://rclone.org/install.sh | sudo bash
+  ```
   
 4.安装qbittorrent 可以选择安装的镜像 lscr.io/linuxserver/qbittorrent:latest lscr.io/linuxserver/qbittorrent:4.6.7
   
