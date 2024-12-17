@@ -1,7 +1,7 @@
 # xiaolong-mp
 简单的脚本安装mp及相关软件
 ```bash
-bash -c "$(curl --insecure -fsSL https://github.com/shixiaolong777/xiaolong-mp/blob/main/xiaolong.sh)"
+curl -O https://raw.githubusercontent.com/shixiaolong777/xiaolong-mp/main/xiaolong.sh && chmod +x xiaolong.sh && ./xiaolong.sh
 ```
 1.安装portainer 可以选择安装的镜像 
   ```bash
