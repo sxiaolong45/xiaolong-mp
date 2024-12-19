@@ -1,5 +1,5 @@
 #!/bin/bash
-、
+
 docker_mirrors=(
     "docker.io"
     "registry-docker-hub-latest-9vqc.onrender.com"
