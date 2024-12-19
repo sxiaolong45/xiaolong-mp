@@ -1,5 +1,23 @@
 #!/bin/bash
 
+mirrors=(
+    "docker.io"
+    "registry-docker-hub-latest-9vqc.onrender.com"
+    "docker.fxxk.dedyn.io"
+    "dockerproxy.com"
+    "hub.uuuadc.top"
+    "docker.jsdelivr.fyi"
+    "docker.registry.cyou"
+    "dockerhub.anzu.vip"
+    "docker.luyao.dynv6.net"
+    "freeno.xyz"
+    "docker.1panel.live"
+    "dockerpull.com"
+    "docker.anyhub.us.kg"
+    "dockerhub.icu"
+    "docker.nastool.de"
+)
+
 # 错误处理
 set -euo pipefail
 
@@ -157,7 +175,7 @@ while true; do
         3) install_rclone ;;
         4) install_service "qBittorrent" "lscr.io/linuxserver/qbittorrent:latest" "/root/qbittorrent/config:/config" "/root/qbittorrent/downloads:/downloads" ;;
         5) install_service "Emby Server" "amilys/embyserver:latest" "/root/emby/config:/config" "/root/media:/mnt/media" ;;
-        6) install_service "MoviePilot" "jxxghp/moviepilot:latest" "/root/media:/media" "/root/mp/config:/config" "/root/.config/rclone/rclone.conf:/moviepilot/.config/rclone/rclone.conf" "/root/qbittorrent/downloads:/downloads" "/root/mp/plugins:/app/plugins" "/root/mp/core:/moviepilot" "/var/run/docker.sock:/var/run/docker.sock" ;;
+        6) install_service "MoviePilot" "jxxghp/moviepilot:latest" "/root/media:/media" "/root/mp/config:/config" "/root/.config/rclone/rclone.conf:/moviepilot/.config/rclone/rclone.conf" ;;
         7) log "退出脚本。"; exit 0 ;;
         *) log "无效输入，请重新输入。" ;;
     esac
