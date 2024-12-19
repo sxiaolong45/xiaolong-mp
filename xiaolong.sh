@@ -200,7 +200,7 @@ show_menu() {
     echo "4. 安装 qBittorrent"
     echo "5. 安装 Emby Server"
     echo "6. 安装 MoviePilot"
-    echo "7. 退出"
+    echo "0. 退出"
     echo "============================"
 }
 
@@ -215,7 +215,7 @@ while true; do
         4) install_qbittorrent ;;
         5) install_emby ;;
         6) install_moviepilot ;;
-        7) echo "退出脚本。"; exit 0 ;;
+        0) echo "退出脚本。"; exit 0 ;;
         *) echo "无效输入，请重新输入。" ;;
     esac
     echo "按回车键返回主菜单..."
