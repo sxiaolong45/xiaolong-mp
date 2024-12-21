@@ -129,6 +129,12 @@ install_alist() {
     generate_and_run_container "Alist" "alist" image_versions[@] volume_mapping[@]
 }
 
+install_MediaLinker() {
+    image_versions=("thsrite/medialinker:latest")
+    volume_mapping=("/root/MediaLinker/:/opt/")
+    generate_and_run_container "Medialinker" "medialinker" image_versions[@] volume_mapping[@]
+}
+
 # 检测并安装 fuse3
 install_fuse3_if_needed() {
     echo "正在检测是否已安装 fuse3..."
@@ -200,6 +206,7 @@ show_menu() {
     echo "4. 安装 qBittorrent"
     echo "5. 安装 Emby Server"
     echo "6. 安装 MoviePilot"
+    echo "7. 安装 MoviePilot"
     echo "0. 退出"
     echo "============================"
 }
@@ -215,6 +222,7 @@ while true; do
         4) install_qbittorrent ;;
         5) install_emby ;;
         6) install_moviepilot ;;
+        7) install_mediaLinker;;
         0) echo "退出脚本。"; exit 0 ;;
         *) echo "无效输入，请重新输入。" ;;
     esac
