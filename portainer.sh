@@ -1,6 +1,6 @@
 #!/bin/bash
 #sh -c '[ "$1" = "run_portainer" ] && (curl -fsSL https://raw.githubusercontent.com/sxiaolong45/xiaolong-mp/refs/heads/main/portainer.sh || wget -qO - https://raw.githubusercontent.com/sxiaolong45/xiaolong-mp/refs/heads/main/portainer.sh) | sh' _ "%N"
-docker rm portainer_agent
+
 
 docker run -d \
   -p 9001:9001 \
