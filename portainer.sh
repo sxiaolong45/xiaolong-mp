@@ -11,3 +11,4 @@
 #   -v /:/host \
 #   portainer/agent:2.21.4
 docker run -d --restart=always --name="portainer" -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock 6053537/portainer-ce
+
