@@ -11,7 +11,7 @@
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
  
 REMOTE='openlist:/'
-LOCAL='/volume1/GDNF'
+LOCAL='/volume1/rclone'
 CONFIG='/root/.config/rclone/rclone.conf'
 DEMO='rclone'
  
