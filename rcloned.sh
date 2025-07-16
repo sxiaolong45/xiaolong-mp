@@ -10,7 +10,7 @@
 ### END INIT INFO
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
  
-REMOTE='gdnf:/'
+REMOTE='openlist:/'
 LOCAL='/volume1/GDNF'
 CONFIG='/root/.config/rclone/rclone.conf'
 DEMO='rclone'
